@@ -1,0 +1,35 @@
+{
+  "name": "event-monolith-app",
+  "version": "1.0.0",
+  "description": "A collaborative event management system with realtime updates",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "build": "bun build src/index.ts --outdir dist",
+    "start": "bun dist/index.js",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:studio": "prisma studio",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": ["event", "management", "realtime", "api"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "elysia": "^1.0.21",
+    "@prisma/client": "^5.14.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.13",
+    "@elysiajs/cors": "^1.0.2",
+    "@elysiajs/swagger": "^1.0.2"
+  },
+  "devDependencies": {
+    "prisma": "^5.14.0",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/nodemailer": "^6.4.14",
+    "typescript": "^5.3.3"
+  }
+}
